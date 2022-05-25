@@ -9,7 +9,7 @@ const newPokemon = pokemonArray
       <img class="card__image" src="${pokemon.sprite}" />
   
       <div class="card__heading">${pokemon.name}</div>
-      <p class="card__text">${pokemon.name}${pokemon.id} is a ${pokemon.types}</p>
+      <p class="card__text">${pokemon.name} (#${pokemon.id}) is a ${pokemon.types[0]} & ${pokemon.types[1]} type pokemon</p>
   </div>
 </div>`;
   })
@@ -25,16 +25,17 @@ const individualPokemon = {
 
 console.log(pokemonArray[0]);
 
-const pokemonContainer = (individualPokemon) => {
-  return `
-    <div class="card">
-        <div class="card__content">
-            <img class="card__image" src="${individualPokemon.sprite}" />
-        
-            <div class="card__heading">${individualPokemon.name}</div>
-            <p class="card__text">${individualPokemon.name}${individualPokemon.id} is a ${individualPokemon.types}</p>
-        </div>
-    </div>`;
-};
+// const pokemonContainer = (individualPokemon) => {
+//   return `
+//     <div class="card">
+//         <div class="card__content">
+//             <img class="card__image" src="${individualPokemon.sprite}" />
+
+//             <div class="card__heading">${individualPokemon.name}</div>
+//             <p class="card__text">${individualPokemon.name}${individualPokemon.id} is a ${individualPokemon.types}</p>
+//         </div>
+//     </div>`;
+// };
 
 cardContainer.innerHTML = newPokemon;
+p.innerText = p.innerText.replace("undefined", "");
